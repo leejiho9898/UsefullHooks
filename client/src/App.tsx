@@ -1,14 +1,19 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Home from "./page/Home/Home";
+import Asd from "./page/register/Asd";
 
-import useFullScreen from "./hooks/useFullScreen";
-import useNotification from "./hooks/useNotification";
+import Register from "./page/register/Register";
 
 function App() {
-  const asd = useNotification("안녕?", { body: "반가워" });
   return (
-    <div className="App">
-      <button onClick={asd}>풀버전</button>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/register2" element={<Asd />} />
+      </Routes>
+    </>
   );
 }
 
