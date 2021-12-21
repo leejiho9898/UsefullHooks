@@ -8,7 +8,6 @@ https://nomadcoders.co/react-hooks-introduction/lobby
 
 
 ## 2. react form hook
- 쓰는 이유
 
 ### 1. 성능
 
