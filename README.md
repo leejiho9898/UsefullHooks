@@ -5,8 +5,6 @@
 https://nomadcoders.co/react-hooks-introduction/lobby
 
 
-
-
 ## 2. react form hook
 
 ### 1. 성능
@@ -26,6 +24,8 @@ Redux Form(16000ms), Formik (5800ms) 과 비교하여  더 빠르다 (3800ms)
 ### 4. 컴포넌트 리렌더링을 분리해준다
 
 페이지나 앱의 퍼포먼스에 부정적인 영향을 줄 수 있는 리랜더링을 분리할 수 있음
+
+
 
 ## 3. 토스페이먼츠 Hook
 (작성중)
