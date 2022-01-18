@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/register2" element={<Asd />} />
+        <Route path="/animation" element={<Asd />} />
       </Routes>
     </>
   );

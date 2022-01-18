@@ -1,36 +1,45 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-
-import "./styles.css";
-
-type Inputs = {
-  example: string;
-  exampleRequired: string;
+import useScrollFadeIn from "../../hooks/useFadeIn";
+import styled from "styled-components";
+import "./asd.css";
+const S = {
+  Wrapper: styled.section`
+    width: 100%;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `,
+  Label: styled.p`
+    display: inline-block;
+    margin-bottom: 1rem;
+  `,
+  Title: styled.h2`
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+  `,
 };
 
 const Asd = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
-  }; // your form submit function which will invoke after successful validation
-
-
-
+  const animatedItem = {
+    0: useScrollFadeIn("up", 1, 0),
+    1: useScrollFadeIn("up", 1, 0.2),
+    2: useScrollFadeIn("up", 1, 0.3),
+  };
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Example</label>
-      <input {...register("example")} defaultValue="test" />
-      <label>ExampleRequired</label>
-      <input
-        {...register("exampleRequired", { required: true, maxLength: 10 })}
-      />
-      {errors.exampleRequired && <p>This field is required</p>}
-      <input type="submit" />
-    </form>
+    <S.Wrapper>
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+      <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <S.Label {...animatedItem[0]}>Get Started</S.Label>
+      <S.Title {...animatedItem[1]}>
+        Etiam erat velit
+        <br />
+        scelerisque in dictum
+      </S.Title>
+      <div {...animatedItem[2]}></div>
+    </S.Wrapper>
   );
 };
 export default Asd;
