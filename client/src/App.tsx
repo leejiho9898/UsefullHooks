@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./page/Home/Home";
-import Asd from "./page/register/Asd";
-
+import Animation from "./page/Animation/Animation";
 import Register from "./page/register/Register";
+import Pay from "./page/pay/Pay";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/register2" element={<Asd />} />
-        <Route path="/animation" element={<Asd />} />
+        <Route path="/animation" element={<Animation />} />
+        <Route path="/pay" element={<Pay />} />
       </Routes>
     </>
   );

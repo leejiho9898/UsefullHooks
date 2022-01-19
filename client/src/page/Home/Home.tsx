@@ -1,27 +1,26 @@
-import requestPayMents from "../../hooks/usePay";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Home = () => {
-  // * 테스트용 클라이언트 키로 시작하세요
 
-  const item = {
-    amount: 1,
-    orderId: "brL9yXo4bVrpAHe7p5sgZ",
-    orderName: "토스 티셔츠 외 2건",
-    customerName: "박토스",
-    successUrl: "http://localhost:3000/success",
-    failUrl: "http://localhost:8080/fail",
-  };
   return (
     <>
-      <button
-        onClick={() => {
-          requestPayMents(item);
-        }}
-      >
-        야 ㅋㅋ 처 눌러봐 병신아
-      </button>
+      <Layout>
+        <Link to="/regester">회원가입 폼</Link>
+        <Link to="/animation">애니메이션</Link>
+        <Link to="/pay">페이먼츠</Link>
+      </Layout>
     </>
   );
 };
 
 export default Home;
+
+const Layout = styled.div`
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c2c2c2;
+`;
